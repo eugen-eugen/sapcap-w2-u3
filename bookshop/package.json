@@ -1,0 +1,21 @@
+{
+  "name": "bookshop",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^3",
+    "express": "^4"
+  },
+  "scripts": {
+    "lerna": "npx --no-install lerna -v > /dev/null || npm i lerna --no-save",
+    "install": "(npm -s run lerna) && lerna bootstrap --hoist",
+    "cleanup": "lerna clean -y && rm -fr node_modules",
+    "bookshop": "cds watch packages/bookshop"
+  },
+  "devDependencies": {
+    "sqlite3": "^4.2.0"
+  }
+}
